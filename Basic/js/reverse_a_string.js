@@ -1,9 +1,5 @@
-// function reverseString(str) {
-//   let reverseStr = [];
-//   for (let i = 0; i < str.length; i++) {
-//     reverseStr.unshift(str[i]);
-//   }
-//   return reverseStr.join("");
-// }
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
 
-// console.log(reverseString("hello"));
+console.log(reverseString("hello"));
