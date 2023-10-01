@@ -3,12 +3,18 @@ function truthCheck(collection, pre) {
   for (let item in collection) {
     if (
       collection[item].hasOwnProperty(pre) &&
-      Boolean(collection[item][pre])
+      !!collection[item][pre]
     ) {
       isTrueCount++;
     }
   }
   return isTrueCount == collection.length;
+}
+
+function truthCheckWithEvery(collection, pre) {
+  return collection.every((item)=> {
+    return item[pre];
+  });
 }
 
 console.log(
